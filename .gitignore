@@ -1,0 +1,6 @@
+# 🔒 Secret files - never push to GitHub
+config.js
+
+# OS files
+.DS_Store
+Thumbs.db
