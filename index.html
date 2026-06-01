@@ -864,10 +864,15 @@ function renderDetail(movie, videos, credits){
 
 function closeDetail(event){
   if(!event || event.target.id === "detail" || event.target.classList.contains("close")){
+    // Find iframe and reset src FIRST (stops YouTube audio)
+    const iframe = document.querySelector("#detailBody iframe");
+    if(iframe){
+      iframe.src = "";
+    }
+    // Then clear and hide
+    document.getElementById("detailBody").innerHTML = "";
     document.getElementById("detail").classList.add("hide");
     document.body.style.overflow = "";
-    // Stop trailer audio by clearing iframe
-    document.getElementById("detailBody").innerHTML = "";
   }
 }
 
