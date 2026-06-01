@@ -866,6 +866,8 @@ function closeDetail(event){
   if(!event || event.target.id === "detail" || event.target.classList.contains("close")){
     document.getElementById("detail").classList.add("hide");
     document.body.style.overflow = "";
+    // Stop trailer audio by clearing iframe
+    document.getElementById("detailBody").innerHTML = "";
   }
 }
 
