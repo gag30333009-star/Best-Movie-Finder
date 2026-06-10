@@ -114,7 +114,23 @@ h1{font-size:clamp(28px,7vw,64px);color:var(--orange-bright);letter-spacing:clam
 .watch-link.free:hover{background:var(--green);color:var(--navy-deep);}
 .watch-note{font-size:11px;color:var(--text-dim);margin-top:0.6rem;font-style:italic;}
 
-.loader{text-align:center;padding:3rem 1rem;color:var(--orange-bright);font-size:clamp(14px,3vw,18px);letter-spacing:2px;}
+.loader{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:3rem 1rem;
+  font-size:0;
+}
+.loader::after{
+  content:"";
+  width:clamp(40px,9vw,58px);
+  height:clamp(40px,9vw,58px);
+  border:5px solid rgba(245,158,11,0.2);
+  border-top-color:var(--orange-bright);
+  border-radius:50%;
+  animation:spin 0.8s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
 .error-box{max-width:600px;margin:3rem auto;padding:2rem;background:rgba(91,26,26,0.5);border:2px solid var(--orange);border-radius:12px;text-align:center;}
 .error-box h2{color:var(--orange-bright);margin-bottom:1rem;}
 .error-box p{color:var(--cream);margin-bottom:1rem;line-height:1.6;}
