@@ -141,9 +141,5 @@ MIT License - feel free to use this for learning or your own projects.
 
 **GAG**
 - GitHub: [@gag30333009-star](https://github.com/gag30333009-star)
-- Email: gag30333009@gmail.com
-- Location: Yerevan, Armenia 🇦🇲
-
 ---
-
 ⭐ **If you found this useful, give it a star!** ⭐
